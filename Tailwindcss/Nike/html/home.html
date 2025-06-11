@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub | Premium Tech Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: '#4da6ff',
+              DEFAULT: '#0080ff',
+              dark: '#0066cc',
+            },
+            secondary: {
+              light: '#ff6699',
+              DEFAULT: '#ff3377',
+              dark: '#e60050',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out forwards;
+    }
+    .cart-badge {
+      transform-origin: center;
+      transition: transform 0.15s ease-in-out;
+    }
+    .cart-badge:hover {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <span class="text-primary text-3xl"><i class="fas fa-bolt"></i></span>
+          <span class="font-bold text-2xl text-gray-800">TechHub</span>
+        </div>
+        <div class="hidden md:block flex-grow max-w-xl mx-6">
+          <div class="relative">
+            <input type="text" class="w-full py-2 px-4 pl-10 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300" placeholder="Search for products...">
+            <span class="absolute left-3 top-2.5 text-gray-400"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+        <nav class="flex items-center space-x-6">
+          <button id="menu-toggle" class="md:hidden text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+          <div class="hidden md:block group relative">
+            <button class="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors">
+              <i class="fas fa-user"></i>
+              <span class="hidden lg:inline">Account</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden group-hover:block fade-in">
+              <a href="./signin.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sign In</a>
+              <a href="./register.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Register</a>
+              <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">My Orders</a>
+            </div>
+          </div>
+          
+          <a href="#" class="hidden md:flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors">
+            <i class="fas fa-heart"></i>
+            <span class="hidden lg:inline">Wishlist</span>
+          </a>
+          <div class="relative group">
+            <button id="cart-button" class="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors">
+              <div class="relative">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge absolute -top-2 -right-2 bg-secondary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+              </div>
+              <span class="hidden lg:inline">Cart</span>
+            </button>
+            <div id="cart-dropdown" class="absolute right-0 mt-2 w-72 bg-white rounded-md shadow-lg py-2 hidden group-hover:block fade-in">
+              <div class="px-4 py-2 border-b border-gray-100">
+                <h3 class="font-semibold">Cart (3 items)</h3>
+              </div>
+              <div class="max-h-60 overflow-y-auto">
+                <div class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                  <img src="./images/apple.jpeg" alt="I am here tomorrow" class="w-10 h-10 rounded object-cover">
+                  <div class="ml-3 flex-grow">
+                    <p class="text-sm font-medium">Apple Pro ultra</p>
+                    <p class="text-xs text-gray-500">1 × $79.99</p>
+                  </div>
+                  <button class="text-gray-400 hover:text-red-500"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                  <img src="./images/mac.jpeg" alt="Product" class="w-10 h-10 rounded object-cover">
+                  <div class="ml-3 flex-grow">
+                    <p class="text-sm font-medium">Mac book 23</p>
+                    <p class="text-xs text-gray-500">1 × $199.99</p>
+                  </div>
+                  <button class="text-gray-400 hover:text-red-500"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                  <img src="./images/sony.jpeg" alt="Product" class="w-10 h-10 rounded object-cover">
+                  <div class="ml-3 flex-grow">
+                    <p class="text-sm font-medium">HD Tv 23Pro</p>
+                    <p class="text-xs text-gray-500">1 × $129.99</p>
+                  </div>
+                  <button class="text-gray-400 hover:text-red-500"><i class="fas fa-times"></i></button>
+                </div>
+              </div>
+              <div class="border-t border-gray-100 px-4 py-2">
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium">Subtotal:</span>
+                  <span class="font-semibold">$409.97</span>
+                </div>
+                <a href="#" class="block bg-primary hover:bg-primary-dark text-white text-center rounded-md py-2 transition-colors duration-300">Checkout</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="md:hidden pb-4">
+        <div class="relative">
+          <input type="text" class="w-full py-2 px-4 pl-10 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300" placeholder="Search for products...">
+          <span class="absolute left-3 top-2.5 text-gray-400"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 bg-white">
+      <div class="container mx-auto px-4">
+        <ul class="flex space-x-1 overflow-x-auto py-2 scrollbar-hide">
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Smartphones</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Laptops</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Tablets</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Headphones</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Smartwatches</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Speakers</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Cameras</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Gaming</a></li>
+          <li><a href="#" class="px-3 py-2 text-sm inline-block whitespace-nowrap hover:text-primary transition-colors duration-200">Accessories</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Next-Gen Technology at Your Fingertips</h1>
+          <p class="text-lg mb-8 text-blue-100">Discover the latest in tech innovation with exclusive deals and premium products.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="bg-white text-blue-900 px-6 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors duration-300">Shop Now</a>
+            <a href="#" class="bg-transparent border-2 border-white px-6 py-3 rounded-md font-semibold hover:bg-white/10 transition-colors duration-300">Learn More</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 relative">
+          <img src="./homewall.jpeg" alt="Featured Product" class="w-full h-auto rounded-lg shadow-lg transform transition-transform duration-700 hover:scale-105">
+          <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse-slow">
+            New Release
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8">Featured Categories</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="category-card group">
+          <a href="#" class="block bg-gray-100 rounded-lg p-4 text-center transition-all duration-300 hover:bg-gray-200 hover:shadow-md">
+            <div class="h-16 w-16 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center text-primary text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 class="font-medium">Smartphones</h3>
+          </a>
+        </div>
+        <div class="category-card group">
+          <a href="#" class="block bg-gray-100 rounded-lg p-4 text-center transition-all duration-300 hover:bg-gray-200 hover:shadow-md">
+            <div class="h-16 w-16 mx-auto mb-3 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3 class="font-medium">Laptops</h3>
+          </a>
+        </div>
+        <div class="category-card group">
+          <a href="#" class="block bg-gray-100 rounded-lg p-4 text-center transition-all duration-300 hover:bg-gray-200 hover:shadow-md">
+            <div class="h-16 w-16 mx-auto mb-3 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-headphones"></i>
+            </div>
+            <h3 class="font-medium">Audio</h3>
+          </a>
+        </div>
+        <div class="category-card group">
+          <a href="#" class="block bg-gray-100 rounded-lg p-4 text-center transition-all duration-300 hover:bg-gray-200 hover:shadow-md">
+            <div class="h-16 w-16 mx-auto mb-3 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition-transform duration-300">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3 class="font-medium">Gaming</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flash Sale -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold flex items-center">
+          <span class="mr-2 text-red-500"><i class="fas fa-bolt"></i></span> 
+          Flash Sale
+        </h2>
+        <div class="flex items-center space-x-2 text-red-500 font-semibold">
+          <span>Ends in:</span>
+          <div class="bg-red-500 text-white px-2 py-1 rounded">10</div>:
+          <div class="bg-red-500 text-white px-2 py-1 rounded">43</div>:
+          <div class="bg-red-500 text-white px-2 py-1 rounded">22</div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 group">
+          <div class="relative">
+            <img src="./images/apple.jpeg" alt="Wireless Earbuds" class="w-full h-48 object-cover">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-25%</div>
+            <button class="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition-colors">
+              <i class="far fa-heart"></i>
+            </button>
+            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <button class="bg-white text-gray-800 hover:bg-primary hover:text-white transition-colors duration-300 rounded-full p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1 line-clamp-1">Wireless Bluetooth Earbuds</h3>
+            <div class="text-yellow-400 text-sm mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span class="text-gray-500 ml-1">(124)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-red-500 font-bold">$59.99</span>
+                <span class="text-gray-400 text-sm line-through ml-1">$79.99</span>
+              </div>
+              <button class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 group">
+          <div class="relative">
+            <img src="./images/mac.jpeg" alt="Smart Watch" class="w-full h-48 object-cover">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-15%</div>
+            <button class="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition-colors">
+              <i class="far fa-heart"></i>
+            </button>
+            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <button class="bg-white text-gray-800 hover:bg-primary hover:text-white transition-colors duration-300 rounded-full p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1 line-clamp-1">Smart Watch Series 5</h3>
+            <div class="text-yellow-400 text-sm mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="text-gray-500 ml-1">(89)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-red-500 font-bold">$169.99</span>
+                <span class="text-gray-400 text-sm line-through ml-1">$199.99</span>
+              </div>
+              <button class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 group">
+          <div class="relative">
+            <img src="./images/watch.jpeg" alt="Bluetooth Speaker" class="w-full h-48 object-cover">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-30%</div>
+            <button class="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition-colors">
+              <i class="far fa-heart"></i>
+            </button>
+            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <button class="bg-white text-gray-800 hover:bg-primary hover:text-white transition-colors duration-300 rounded-full p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1 line-clamp-1">Galaxy watch</h3>
+            <div class="text-yellow-400 text-sm mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="text-gray-500 ml-1">(156)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-red-500 font-bold">$89.99</span>
+                <span class="text-gray-400 text-sm line-through ml-1">$129.99</span>
+              </div>
+              <button class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 group">
+          <div class="relative">
+            <img src="./images/sams.jpeg" alt="Power Bank" class="w-full h-48 object-cover">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-20%</div>
+            <button class="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition-colors">
+              <i class="far fa-heart"></i>
+            </button>
+            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+              <button class="bg-white text-gray-800 hover:bg-primary hover:text-white transition-colors duration-300 rounded-full p-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1 line-clamp-1">20000mAh Power Bank</h3>
+            <div class="text-yellow-400 text-sm mb-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              <span class="text-gray-500 ml-1">(78)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-red-500 font-bold">$39.99</span>
+                <span class="text-gray-400 text-sm line-through ml-1">$49.99</span>
+              </div>
+              <button class="text-primary hover:text-primary-dark transition-colors">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="#" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-6 py-2 rounded-md transition-colors duration-300">View All Deals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-12 bg-gradient-to-r from-primary to-blue-700 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h2>
+        <p class="mb-6">Get the latest news, exclusive deals and tech tips directly to your inbox.</p>
+        <form class="flex flex-col sm:flex-row gap-2">
+          <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+          <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-6 py-3 rounded-md transition-colors duration-300">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-4">"TechHub has the best selection of gadgets I've found online. Fast shipping and great customer service too!"</p>
+          <div class="flex items-center">
+            <img src="./images/6a2d63d7-8303-4809-8f78-5732e58d62e9.jpeg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-medium">Sarah Johnson</h4>
+              <p class="text-sm text-gray-500">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-600 mb-4">"The deals on this site are unbeatable. I've bought several items and have always been impressed with the quality."</p>
+          <div class="flex items-center">
+            <img src="./images/ea02ebb4-ed08-4175-a5df-6d1c648f55e7.jpeg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-medium">Michael Chen</h4>
+              <p class="text-sm text-gray-500">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="text-yellow-400 mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text-gray-600 mb-4">"Customer support is amazing! They helped me choose the perfect laptop for my needs and followed up after delivery."</p>
+          <div class="flex items-center">
+            <img src="./images/6a2d63d7-8303-4809-8f78-5732e58d62e9.jpeg" alt="Customer" class="w-10 h-10 rounded-full mr-3">
+            <div>
+              <h4 class="font-medium">Emma Rodriguez</h4>
+              <p class="text-sm text-gray-500">Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300">
+    <!-- Main Footer -->
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <span class="text-primary text-2xl"><i class="fas fa-bolt"></i></span>
+            <span class="font-bold text-2xl text-white">TechHub</span>
+          </div>
+          <p class="text-gray-400">Your one-stop shop for the latest and greatest in technology. Shop with confidence and enjoy exclusive deals.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-white mb-4">Customer Service</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Contact Us</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Returns & Exchanges</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Shipping Information</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-white mb-4">About Us</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Our Story</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Careers</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors duration-300">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg text-white mb-4">Subscribe to Our Newsletter</h3>
+          <p class="text-gray-400 mb-4">Stay updated with the latest news and exclusive members.</p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Footer -->
+    <div class="bg-gray-900 py-4">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-400">&copy;2025 TechHub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const cartDropdown = document.getElementById('cart-dropdown');
+    const cartButton = document.getElementById('cart-button');
+
+    menuToggle.addEventListener('click', () => {
+      const mobileMenu = document.querySelector('.mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    cartButton.addEventListener('click', () => {
+      cartDropdown.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!cartButton.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.classList.add('hidden');
+      }
+    });
+    // Close cart dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!cartButton.contains(event.target) && !cartDropdown.contains(event.target)) {
+        cartDropdown.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

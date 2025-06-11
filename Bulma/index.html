@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Your Travel Companion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero.is-primary {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <span class="has-text-primary is-size-4 has-text-weight-bold">Wanderlust</span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item">Home</a>
+                    <a class="navbar-item">Destinations</a>
+                    <a class="navbar-item">Deals</a>
+                    <a class="navbar-item">Contact</a>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">Sign Up</a>
+                            <a class="button is-light">Log in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-primary is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1">
+                    Discover Your Next Adventure
+                </h1>
+                <h2 class="subtitle">
+                    Explore the world's most beautiful destinations with us
+                </h2>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="text" placeholder="Where do you want to go?">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            Search
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="title has-text-centered mb-6">Why Choose Us</h2>
+            <div class="columns">
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <span class="icon is-large has-text-primary">
+                            <i class="fas fa-globe-americas fa-2x"></i>
+                        </span>
+                        <h3 class="title is-4 mt-4">Global Destinations</h3>
+                        <p>Access to over 1000+ destinations worldwide</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <span class="icon is-large has-text-primary">
+                            <i class="fas fa-tags fa-2x"></i>
+                        </span>
+                        <h3 class="title is-4 mt-4">Best Deals</h3>
+                        <p>Exclusive discounts and special offers</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <span class="icon is-large has-text-primary">
+                            <i class="fas fa-headset fa-2x"></i>
+                        </span>
+                        <h3 class="title is-4 mt-4">24/7 Support</h3>
+                        <p>Round-the-clock customer assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="section has-background-light">
+        <div class="container">
+            <h2 class="title has-text-centered mb-6">Popular Destinations</h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3" alt="Paris">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Paris, France</p>
+                            <p class="subtitle is-6">The City of Light</p>
+                            <div class="content">
+                                <span class="tag is-primary">From $599</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3" alt="Bali">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Bali, Indonesia</p>
+                            <p class="subtitle is-6">Tropical Paradise</p>
+                            <div class="content">
+                                <span class="tag is-primary">From $799</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3" alt="Santorini">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-4">Santorini, Greece</p>
+                            <p class="subtitle is-6">Mediterranean Gem</p>
+                            <div class="content">
+                                <span class="tag is-primary">From $899</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box">
+                        <h3 class="title is-4 has-text-centered">Subscribe to Our Newsletter</h3>
+                        <p class="has-text-centered mb-4">Get the latest travel deals and updates</p>
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input" type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="control">
+                                <button class="button is-primary">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h4 class="title is-4">Wanderlust</h4>
+                    <p>Your ultimate travel companion</p>
+                </div>
+                <div class="column">
+                    <h4 class="title is-4">Quick Links</h4>
+                    <ul>
+                        <li><a>About Us</a></li>
+                        <li><a>Destinations</a></li>
+                        <li><a>Deals</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="title is-4">Connect With Us</h4>
+                    <div class="buttons">
+                        <a class="button is-light"><i class="fab fa-facebook"></i></a>
+                        <a class="button is-light"><i class="fab fa-twitter"></i></a>
+                        <a class="button is-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="content has-text-centered">
+                <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

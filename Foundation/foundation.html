@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Your Travel Companion</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+        }
+        .card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            height: 100%;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #1779ba;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 3rem 0;
+        }
+        .footer-links {
+            list-style: none;
+            margin: 0;
+        }
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-links a {
+            color: #1779ba;
+        }
+        .social-buttons .button {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu">
+                <li class="menu-text">Wanderlust</li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="button primary">Sign Up</a></li>
+                <li><a href="#" class="button secondary">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell">
+                    <h1 class="text-center">Discover Your Next Adventure</h1>
+                    <h3 class="text-center">Explore the world's most beautiful destinations with us</h3>
+                    <div class="grid-x grid-padding-x align-center">
+                        <div class="medium-8 cell">
+                            <div class="input-group">
+                                <input class="input-group-field" type="text" placeholder="Where do you want to go?">
+                                <div class="input-group-button">
+                                    <input type="submit" class="button" value="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell text-center">
+                <h2 class="margin-top-2">Why Choose Us</h2>
+            </div>
+            <div class="cell medium-4">
+                <div class="feature-box">
+                    <i class="fas fa-globe-americas feature-icon"></i>
+                    <h3>Global Destinations</h3>
+                    <p>Access to over 1000+ destinations worldwide</p>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="feature-box">
+                    <i class="fas fa-tags feature-icon"></i>
+                    <h3>Best Deals</h3>
+                    <p>Exclusive discounts and special offers</p>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="feature-box">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell text-center">
+                <h2 class="margin-top-2">Popular Destinations</h2>
+            </div>
+            <div class="cell medium-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3" alt="Paris">
+                    <div class="card-section">
+                        <h4>Paris, France</h4>
+                        <p class="subheader">The City of Light</p>
+                        <span class="label primary">From $599</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3" alt="Bali">
+                    <div class="card-section">
+                        <h4>Bali, Indonesia</h4>
+                        <p class="subheader">Tropical Paradise</p>
+                        <span class="label primary">From $799</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cell medium-4">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3" alt="Santorini">
+                    <div class="card-section">
+                        <h4>Santorini, Greece</h4>
+                        <p class="subheader">Mediterranean Gem</p>
+                        <span class="label primary">From $899</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell medium-6">
+                <div class="callout">
+                    <h3 class="text-center">Subscribe to Our Newsletter</h3>
+                    <p class="text-center">Get the latest travel deals and updates</p>
+                    <div class="input-group">
+                        <input class="input-group-field" type="email" placeholder="Enter your email">
+                        <div class="input-group-button">
+                            <input type="submit" class="button" value="Subscribe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-4">
+                    <h4>Wanderlust</h4>
+                    <p>Your ultimate travel companion</p>
+                </div>
+                <div class="cell medium-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="cell medium-4">
+                    <h4>Connect With Us</h4>
+                    <div class="social-buttons">
+                        <a href="#" class="button secondary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="button secondary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="button secondary"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Foundation JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>

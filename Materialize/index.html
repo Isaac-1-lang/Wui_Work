@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeadOut - Your Travel Companion</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-wrapper transparent z-depth-0">
+        <div class="container">
+          <a href="#" class="brand-logo indigo-text text-darken-4">HeadOut</a>
+          <a href="#" class="sidenav-trigger black-text" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#" class="black-text waves-effect">Home</a></li>
+            <li><a href="#" class="black-text waves-effect">About</a></li>
+            <li><a href="#" class="black-text waves-effect">Places</a></li>
+            <li><a href="#" class="black-text waves-effect">Experiences</a></li>
+            <li><a href="#" class="btn indigo waves-effect waves-light">Book Now</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul id="mobile-nav" class="sidenav">
+        <li><a href="#" class="waves-effect">Home</a></li>
+        <li><a href="#" class="waves-effect">About</a></li>
+        <li><a href="#" class="waves-effect">Places</a></li>
+        <li><a href="#" class="waves-effect">Experiences</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#" class="waves-effect btn indigo">Book Now</a></li>
+      </ul>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="section hero valign-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 l5" data-aos="fade-right">
+              <h1 class="hero-title">Explore Horizons</h1>
+              <p class="hero-text">
+                Discover the world's most breathtaking destinations and create unforgettable memories with our curated travel experiences.
+              </p>
+              <div class="hero-buttons">
+                <a href="#" class="btn-large indigo waves-effect waves-light">Start Exploring</a>
+                <a href="#" class="btn-large indigo-text text-darken-4 waves-effect waves-light transparent">Learn More</a>
+              </div>
+            </div>
+            <div class="col s12 l7 header-images" data-aos="fade-left">
+              <div class="image-grid">
+                <img src="images/header-1.jpg" alt="Travel destination" class="responsive-img" />
+                <img src="images/header-2.jpg" alt="Travel destination" class="responsive-img" />
+                <img src="images/header-3.jpg" alt="Travel destination" class="responsive-img" />
+                <img src="images/header-4.jpg" alt="Travel destination" class="responsive-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="waves"></div>
+      </section>
+      <section class="section about">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 l6" data-aos="fade-up">
+              <h2 class="section-title">Travelling Made Easier</h2>
+              <p class="section-text">
+                Experience the world like never before with our carefully curated travel packages. We take care of every detail so you can focus on creating memories.
+              </p>
+              <p class="section-text">
+                From luxury accommodations to authentic local experiences, we ensure your journey is nothing short of extraordinary.
+              </p>
+              <a href="#" class="btn-large indigo waves-effect waves-light">Start Your Journey</a>
+            </div>
+            <div class="col s12 l6">
+              <div class="row">
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card hoverable">
+                    <div class="card-content center-align">
+                      <i class="material-icons large indigo-text">explore</i>
+                      <span class="card-title">To Travel is to Live</span>
+                      <p>Discover new cultures and create lasting memories with our immersive travel experiences.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card hoverable">
+                    <div class="card-content center-align">
+                      <i class="material-icons large indigo-text">hiking</i>
+                      <span class="card-title">Leave Footprints</span>
+                      <p>Explore hidden gems and create your own path through the world's most beautiful destinations.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="card hoverable">
+                    <div class="card-content center-align">
+                      <i class="material-icons large indigo-text">travel_explore</i>
+                      <span class="card-title">Make Memories</span>
+                      <p>Capture unforgettable moments and stories that will last a lifetime.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col s12 m6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="card hoverable">
+                    <div class="card-content center-align">
+                      <i class="material-icons large indigo-text">map</i>
+                      <span class="card-title">Explore the World</span>
+                      <p>From pristine beaches to majestic mountains, discover the world's wonders.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section destinations">
+        <div class="container">
+          <div class="section-header center-align" data-aos="fade-up">
+            <h2 class="section-title">Famous Destinations</h2>
+            <p class="section-text">
+              Explore our handpicked selection of the world's most captivating destinations, each offering unique experiences and unforgettable adventures.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col s12 m6 l3" data-aos="fade-up" data-aos-delay="100">
+              <div class="card destination-card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="images/destinations-1.jpg" alt="Destination" class="activator" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Bali, Indonesia<i class="material-icons right">more_vert</i></span>
+                  <p class="destination-price">From $899</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Bali, Indonesia<i class="material-icons right">close</i></span>
+                  <p>Experience the perfect blend of culture, beaches, and luxury in this tropical paradise.</p>
+                  <a href="#" class="btn indigo waves-effect waves-light">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3" data-aos="fade-up" data-aos-delay="200">
+              <div class="card destination-card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="images/destinations-2.jpg" alt="Destination" class="activator" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Tokyo, Japan<i class="material-icons right">more_vert</i></span>
+                  <p class="destination-price">From $799</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Tokyo, Japan<i class="material-icons right">close</i></span>
+                  <p>Experience the vibrant city life and ancient traditions in Tokyo.</p>
+                  <a href="#" class="btn indigo waves-effect waves-light">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3" data-aos="fade-up" data-aos-delay="300">
+              <div class="card destination-card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="images/destinations-3.jpg" alt="Destination" class="activator" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Moscow, Russia<i class="material-icons right">more_vert</i></span>
+                  <p class="destination-price">From $999</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Moscow, Russia<i class="material-icons right">close</i></span>
+                  <p>Experience the rich history and vibrant culture of Moscow.</p>
+                  <a href="#" class="btn indigo waves-effect waves-light">Book Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6 l3" data-aos="fade-up" data-aos-delay="400">
+              <div class="card destination-card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img src="images/destinations-4.jpg" alt="Destination" class="activator" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Denver, USA<i class="material-icons right">more_vert</i></span>
+                  <p class="destination-price">From $699</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Denver, USA<i class="material-icons right">close</i></span>
+                  <p>Experience the beauty of the Rocky Mountains and the vibrant city life of Denver.</p>
+                  <a href="#" class="btn indigo waves-effect waves-light">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section featured-images">
+        <div class="container">
+          <div class="section-header center-align" data-aos="fade-up">
+            <h2 class="section-title">Featured Images</h2>
+            <p class="section-text">
+              Discover the world's most breathtaking destinations through our featured images.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col s12 m6 l8" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="images/destinations-1.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col s12 m6 l4" data-aos="fade-up" data-aos-delay="200">
+              <img
+                src="images/destinations-2.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col s12 m12 l6" data-aos="fade-up" data-aos-delay="300">
+              <img
+                src="images/destinations-3.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col m6 l3" data-aos="fade-up" data-aos-delay="400">
+              <img
+                src="images/destinations-4.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col m6 l3" data-aos="fade-up" data-aos-delay="500">
+              <img
+                src="images/destinations-5.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col s12 m12 l3" data-aos="fade-up" data-aos-delay="600">
+              <img
+                src="images/destinations-6.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col s12 m6 l3" data-aos="fade-up" data-aos-delay="700">
+              <img
+                src="images/header-1.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+            <div class="col s12 m6 l6" data-aos="fade-up" data-aos-delay="800">
+              <img
+                src="images/header-2.jpg"
+                alt="Featured Image"
+                class="materialboxed"
+                data-caption="Insert a beautiful caption here"
+                height="400"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-header center-align" data-aos="fade-up">
+            <h2 class="section-title">Get in Touch With Us</h2>
+            <p class="section-text">
+              We're here to help you plan the perfect trip. Whether you have a question or need assistance, we're ready to assist you.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col s12 m6" data-aos="fade-up" data-aos-delay="100">
+              <h5>Send a Message</h5>
+              <p class="grey-text text-darken-1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+                commodi sed corrupti fuga adipisci molestias.
+              </p>
+              <form action="" class="form row">
+                <div class="input-field col s12">
+                  <input type="text" id="name" class="validate" />
+                  <label for="name">Full Name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input type="email" id="email" class="validate" />
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input type="tel" id="tel" class="validate" />
+                  <label for="tel">Phone Number</label>
+                </div>
+                <div class="input-field col s12">
+                  <textarea id="textarea" class="materialize-textarea"></textarea>
+                  <label for="textarea">Message</label>
+                </div>
+                <button
+                  class="waves-effect waves-light btn-large indigo"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+            <div class="col s12 m6" data-aos="fade-up" data-aos-delay="200">
+              <h5>Frequently Asked Questions</h5>
+              <p class="grey-text text-darken-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit incidunt cupiditate nihil recusandae velit dolorum.
+              </p>
+              <ul class="collapsible expandable z-depth-0">
+                <li class="active">
+                  <div class="collapsible-header">
+                    <i class="material-icons indigo-text">looks_one</i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                  </div>
+                  <div class="collapsible-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae nostrum corporis, consequatur labore animi incidunt
+                    nobis voluptate eligendi culpa accusantium?
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header">
+                    <i class="material-icons indigo-text">looks_two</i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </div>
+                  <div class="collapsible-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae nostrum corporis, consequatur labore animi incidunt
+                    nobis voluptate eligendi culpa accusantium?
+                  </div>
+                </li>
+                <li>
+                  <div class="collapsible-header">
+                    <i class="material-icons indigo-text">looks_3</i>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Tenetur!
+                  </div>
+                  <div class="collapsible-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae nostrum corporis, consequatur labore animi incidunt
+                    nobis voluptate eligendi culpa accusantium?
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer indigo darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l4">
+            <h5 class="white-text">HeadOut</h5>
+            <p class="grey-text text-lighten-4">Your trusted travel companion for unforgettable adventures around the world.</p>
+          </div>
+          <div class="col s12 l4">
+            <h5 class="white-text">Quick Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-4" href="#">About Us</a></li>
+              <li><a class="grey-text text-lighten-4" href="#">Destinations</a></li>
+              <li><a class="grey-text text-lighten-4" href="#">Experiences</a></li>
+              <li><a class="grey-text text-lighten-4" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col s12 l4">
+            <h5 class="white-text">Connect With Us</h5>
+            <div class="social-links">
+              <a class="grey-text text-lighten-4" href="#"><i class="material-icons">facebook</i></a>
+              <a class="grey-text text-lighten-4" href="#"><i class="material-icons">twitter</i></a>
+              <a class="grey-text text-lighten-4" href="#"><i class="material-icons">instagram</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align">
+          &copy; 2025 HeadOut. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {
+          fullWidth: true,
+          indicators: true
+        });
+
+        AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+        });
+      });
+    </script>
+  </body>
+</html>
